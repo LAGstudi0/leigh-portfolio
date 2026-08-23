@@ -1,0 +1,41 @@
+# dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+*.tsbuildinfo
+
+# production
+dist/
+build/
+
+# generated media derivatives
+public/media/video/*
+public/media/posters/*
+public/media/images/*
+!public/media/video/.gitkeep
+!public/media/posters/.gitkeep
+!public/media/images/.gitkeep
+
+# client source material
+source-assets/
+
+# environment
+.env
+.env.*
+!.env.example
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# system files
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
