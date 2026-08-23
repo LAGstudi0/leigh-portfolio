@@ -6,12 +6,27 @@ export const projects: Project[] = [
     title: "Trailer Showreel",
     status: "known",
     categorySlug: "trailer-work",
+    thumbnail: {
+      type: "image",
+      src: "/media/images/trailer-work.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
+    hero: {
+      type: "image",
+      src: "/media/images/trailer-work.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
     externalVideo: {
       platform: "vimeo",
       url: "https://vimeo.com/902615675",
       title: "Leigh Salvage Trailer Reel",
-      thumbnail:
-        "https://i.vimeocdn.com/video/1782187082-26f9efb5862c8cc77946b9687b24fcb7935b989497f037ad7455862c686b2e34-d_295x166?region=us",
+      thumbnail: "/media/images/trailer-work.webp",
       durationSeconds: 58
     },
     sourceAssets: [
@@ -32,6 +47,14 @@ export const projects: Project[] = [
     title: "Isle of Dogs",
     status: "known",
     categorySlug: "hand-drawn-animation",
+    thumbnail: {
+      type: "image",
+      src: "https://i.vimeocdn.com/video/827744774-4cf95fbd7c2fc3faa7bbe7882f2dfae5b1e29c0780a04ecf5d6df6509c4682f9-d_640?region=us",
+      alt: "",
+      width: 640,
+      height: 360,
+      aspectRatio: "16 / 9"
+    },
     externalVideo: {
       platform: "vimeo",
       url: "https://vimeo.com/297728814",
@@ -50,11 +73,27 @@ export const projects: Project[] = [
     title: "CNCO - Beso",
     status: "known",
     categorySlug: "music-videos",
+    thumbnail: {
+      type: "image",
+      src: "/media/images/cnco-beso.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
+    hero: {
+      type: "image",
+      src: "/media/images/cnco-beso.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
     externalVideo: {
       platform: "youtube",
       url: "https://www.youtube.com/watch?v=otDkCBw7f-w",
       title: "CNCO - Beso (An Immersive 360 Reality Audio Experience)",
-      thumbnail: "https://i.ytimg.com/vi/otDkCBw7f-w/hqdefault.jpg"
+      thumbnail: "/media/images/cnco-beso.webp"
     },
     sourceAssets: [
       {
@@ -74,11 +113,19 @@ export const projects: Project[] = [
     title: "The Kid LAROI - STAY",
     status: "known",
     categorySlug: "music-videos",
+    thumbnail: {
+      type: "image",
+      src: "/media/images/music-videos.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
     externalVideo: {
       platform: "youtube",
       url: "https://youtu.be/gwkq_ubkzEY?si=dKgAalZT039K_8te",
       title: "The Kid LAROI - STAY (A Performance Video I Made With My Fans)",
-      thumbnail: "https://i.ytimg.com/vi/gwkq_ubkzEY/hqdefault.jpg"
+      thumbnail: "/media/images/music-videos.webp"
     },
     sourceAssets: [
       {
@@ -98,6 +145,14 @@ export const projects: Project[] = [
     title: "Maxi Millz - Young and Stupid",
     status: "known",
     categorySlug: "music-videos",
+    thumbnail: {
+      type: "image",
+      src: "https://i.ytimg.com/vi/0yau_f0PKR8/hqdefault.jpg",
+      alt: "",
+      width: 480,
+      height: 360,
+      aspectRatio: "16 / 9"
+    },
     externalVideo: {
       platform: "youtube",
       url: "https://youtu.be/0yau_f0PKR8?si=LUqq5gyZ-3Us2Z4d",
@@ -114,11 +169,27 @@ export const projects: Project[] = [
     title: "The Cribs - Running Into You",
     status: "known",
     categorySlug: "music-videos",
+    thumbnail: {
+      type: "image",
+      src: "/media/images/the-cribs-running-into-you.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
+    hero: {
+      type: "image",
+      src: "/media/images/the-cribs-running-into-you.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
     externalVideo: {
       platform: "youtube",
       url: "https://www.youtube.com/watch?v=m_eAE8sSRho",
       title: "The Cribs - Running Into You",
-      thumbnail: "https://i.ytimg.com/vi/m_eAE8sSRho/hqdefault.jpg"
+      thumbnail: "/media/images/the-cribs-running-into-you.webp"
     },
     sourceAssets: [
       {
@@ -138,11 +209,19 @@ export const projects: Project[] = [
     title: "TRAILD Explainer",
     status: "known",
     categorySlug: "explainers",
+    thumbnail: {
+      type: "image",
+      src: "/media/images/explainers.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
     externalVideo: {
       platform: "youtube",
       url: "https://www.youtube.com/watch?v=qeCEhIiACbg",
       title: "TRAILD's Fast Smart Secure Accounts Payable",
-      thumbnail: "https://i.ytimg.com/vi/qeCEhIiACbg/hqdefault.jpg"
+      thumbnail: "/media/images/explainers.webp"
     },
     unresolved: [
       "Confirm exact public title casing.",
@@ -154,8 +233,17 @@ export const projects: Project[] = [
     title: "Detector Inspector - Access Issues",
     status: "known",
     categorySlug: "explainers",
+    thumbnail: {
+      type: "image",
+      src: "/media/posters/detector-inspector-access-issues.webp",
+      alt: "",
+      width: 1600,
+      height: 900,
+      aspectRatio: "16 / 9"
+    },
     localVideo: {
       type: "video",
+      poster: "/media/posters/detector-inspector-access-issues.webp",
       aspectRatio: "16 / 9"
     },
     sourceAssets: [
@@ -173,8 +261,17 @@ export const projects: Project[] = [
     title: "Marketbase+",
     status: "known",
     categorySlug: "explainers",
+    thumbnail: {
+      type: "image",
+      src: "/media/posters/marketbase-plus.webp",
+      alt: "",
+      width: 1600,
+      height: 900,
+      aspectRatio: "16 / 9"
+    },
     localVideo: {
       type: "video",
+      poster: "/media/posters/marketbase-plus.webp",
       aspectRatio: "16 / 9"
     },
     sourceAssets: [
@@ -195,6 +292,14 @@ export const projects: Project[] = [
     title: "Orikan Explainer",
     status: "known",
     categorySlug: "explainers",
+    thumbnail: {
+      type: "image",
+      src: "https://i.vimeocdn.com/video/2074160833-e36a542f3872e40527dd91cace3de86c081e2795644282e26616701e7056bc35-d_295x166?region=us",
+      alt: "",
+      width: 295,
+      height: 166,
+      aspectRatio: "16 / 9"
+    },
     externalVideo: {
       platform: "vimeo",
       url: "https://vimeo.com/1130463450",
@@ -213,8 +318,17 @@ export const projects: Project[] = [
     title: "CEI Global Explainer",
     status: "inferred",
     categorySlug: "social-impact",
+    thumbnail: {
+      type: "image",
+      src: "/media/images/social-impact.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
     localVideo: {
       type: "video",
+      poster: "/media/images/social-impact.webp",
       aspectRatio: "16 / 9"
     },
     sourceAssets: [
@@ -241,8 +355,18 @@ export const projects: Project[] = [
     title: "Hand Drawn Animation Showreel",
     status: "known",
     categorySlug: "hand-drawn-animation",
+    featured: true,
+    thumbnail: {
+      type: "image",
+      src: "/media/images/hand-drawn-animation.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
     localVideo: {
       type: "video",
+      poster: "/media/images/hand-drawn-animation.webp",
       aspectRatio: "16 / 9"
     },
     sourceAssets: [
@@ -268,8 +392,17 @@ export const projects: Project[] = [
     title: "The Metamorphic Rainbow",
     status: "inferred",
     categorySlug: "hand-drawn-animation",
+    thumbnail: {
+      type: "image",
+      src: "/media/posters/the-metamorphic-rainbow.webp",
+      alt: "",
+      width: 1600,
+      height: 900,
+      aspectRatio: "16 / 9"
+    },
     localVideo: {
       type: "video",
+      poster: "/media/posters/the-metamorphic-rainbow.webp",
       aspectRatio: "16 / 9"
     },
     sourceAssets: [
@@ -290,8 +423,25 @@ export const projects: Project[] = [
     title: "Cacophony",
     status: "known",
     categorySlug: "hand-drawn-animation",
+    thumbnail: {
+      type: "image",
+      src: "/media/images/cacophony.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
+    hero: {
+      type: "image",
+      src: "/media/images/cacophony.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
     localVideo: {
       type: "video",
+      poster: "/media/images/cacophony.webp",
       aspectRatio: "16 / 9"
     },
     sourceAssets: [
@@ -315,8 +465,17 @@ export const projects: Project[] = [
     title: "Pixie Melody",
     status: "inferred",
     categorySlug: "hand-drawn-animation",
+    thumbnail: {
+      type: "image",
+      src: "/media/posters/pixie-melody.webp",
+      alt: "",
+      width: 1600,
+      height: 900,
+      aspectRatio: "16 / 9"
+    },
     localVideo: {
       type: "video",
+      poster: "/media/posters/pixie-melody.webp",
       aspectRatio: "16 / 9"
     },
     sourceAssets: [
@@ -337,8 +496,17 @@ export const projects: Project[] = [
     title: "Daydream",
     status: "known",
     categorySlug: "hand-drawn-animation",
+    thumbnail: {
+      type: "image",
+      src: "/media/posters/daydream.webp",
+      alt: "",
+      width: 1600,
+      height: 900,
+      aspectRatio: "16 / 9"
+    },
     localVideo: {
       type: "video",
+      poster: "/media/posters/daydream.webp",
       aspectRatio: "16 / 9"
     },
     sourceAssets: [
@@ -356,6 +524,14 @@ export const projects: Project[] = [
     title: "Sila Lua - Iris (Sumluv Remix)",
     status: "inferred",
     categorySlug: "hand-drawn-animation",
+    thumbnail: {
+      type: "image",
+      src: "https://i.ytimg.com/vi/PWRUr9AIxH4/hqdefault.jpg",
+      alt: "",
+      width: 480,
+      height: 360,
+      aspectRatio: "16 / 9"
+    },
     externalVideo: {
       platform: "youtube",
       url: "https://www.youtube.com/watch?v=PWRUr9AIxH4",
@@ -380,8 +556,17 @@ export const projects: Project[] = [
     title: "Episode 05 - The Leak",
     status: "inferred",
     categorySlug: "social-impact",
+    thumbnail: {
+      type: "image",
+      src: "/media/posters/episode-05-the-leak.webp",
+      alt: "",
+      width: 1600,
+      height: 900,
+      aspectRatio: "16 / 9"
+    },
     localVideo: {
       type: "video",
+      poster: "/media/posters/episode-05-the-leak.webp",
       aspectRatio: "16 / 9"
     },
     sourceAssets: [
@@ -401,12 +586,104 @@ export const projects: Project[] = [
     title: "Big Feelings",
     status: "known",
     categorySlug: "big-feelings",
-    localVideo: {
-      type: "video",
+    thumbnail: {
+      type: "image",
+      src: "/media/images/big-feelings.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
       aspectRatio: "16 / 9"
     },
+    hero: {
+      type: "image",
+      src: "/media/images/big-feelings.webp",
+      alt: "",
+      width: 1920,
+      height: 1080,
+      aspectRatio: "16 / 9"
+    },
+    localVideo: {
+      type: "video",
+      poster: "/media/images/big-feelings.webp",
+      aspectRatio: "16 / 9"
+    },
+    gallery: [
+      {
+        type: "image",
+        src: "/media/images/big-feelings-bg-2.webp",
+        alt: "",
+        caption: "Background Art",
+        width: 1920,
+        height: 679,
+        aspectRatio: "3572 / 1263"
+      },
+      {
+        type: "image",
+        src: "/media/images/big-feelings-character-designs.webp",
+        alt: "",
+        caption: "Character Designs",
+        width: 1024,
+        height: 635,
+        aspectRatio: "1024 / 635"
+      },
+      {
+        type: "image",
+        src: "/media/images/big-feelings-face.webp",
+        alt: "",
+        caption: "Expression Library",
+        width: 1024,
+        height: 640,
+        aspectRatio: "1024 / 640"
+      },
+      {
+        type: "image",
+        src: "/media/images/big-feelings-hands.webp",
+        alt: "",
+        caption: "Hand Poses",
+        width: 1024,
+        height: 549,
+        aspectRatio: "1024 / 549"
+      },
+      {
+        type: "image",
+        src: "/media/images/big-feelings-bounce.webp",
+        alt: "",
+        caption: "Character Designs",
+        width: 1024,
+        height: 826,
+        aspectRatio: "1024 / 826"
+      },
+      {
+        type: "image",
+        src: "/media/images/big-feelings-spark.webp",
+        alt: "",
+        caption: "Character Designs",
+        width: 1024,
+        height: 578,
+        aspectRatio: "1024 / 578"
+      },
+      {
+        type: "image",
+        src: "/media/images/big-feelings-bg-1.webp",
+        alt: "",
+        caption: "Background Art",
+        width: 1920,
+        height: 1093,
+        aspectRatio: "7998 / 4552"
+      },
+      {
+        type: "image",
+        src: "/media/images/big-feelings-bg-3.webp",
+        alt: "",
+        caption: "Background Art",
+        width: 1920,
+        height: 1307,
+        aspectRatio: "6400 / 4355"
+      }
+    ],
     caseStudy: true,
     featured: true,
+    layout: "case-study",
     sourceAssets: [
       {
         label: "_Paulo/Big Feelings.png",

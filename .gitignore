@@ -12,11 +12,7 @@ build/
 
 # generated media derivatives
 public/media/video/*
-public/media/posters/*
-public/media/images/*
 !public/media/video/.gitkeep
-!public/media/posters/.gitkeep
-!public/media/images/.gitkeep
 
 # client source material
 source-assets/

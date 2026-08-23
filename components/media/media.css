@@ -10,10 +10,15 @@
 .aspect-box > img,
 .aspect-box > video,
 .responsive-image,
-.local-video {
+.local-video,
+.local-video-poster img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.responsive-image {
+  background: var(--color-surface-strong);
 }
 
 .media-placeholder {
@@ -42,11 +47,20 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.78;
+  opacity: 0.84;
+  transition:
+    opacity var(--transition-fast),
+    transform 420ms ease;
+}
+
+.external-video__poster:hover img {
+  opacity: 0.68;
+  transform: scale(1.02);
 }
 
 .external-video__play {
   position: relative;
+  z-index: 1;
   display: inline-flex;
   min-width: 5rem;
   min-height: 5rem;
@@ -59,4 +73,16 @@
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.local-video-poster {
+  background: var(--color-surface-strong);
+}
+
+@media (max-width: 520px) {
+  .external-video__play {
+    min-width: 4rem;
+    min-height: 4rem;
+    font-size: 0.7rem;
+  }
 }

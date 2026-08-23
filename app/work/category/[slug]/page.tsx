@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   categories,
@@ -7,6 +8,7 @@ import {
 } from "@/content";
 import { ProjectSummary } from "@/components/project/ProjectSummary";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { ResponsiveImage } from "@/components/media/ResponsiveImage";
 
 type CategoryRouteProps = {
   params: Promise<{
@@ -46,19 +48,40 @@ export default async function CategoryPage({ params }: CategoryRouteProps) {
   }
 
   const categoryProjects = getProjectsByCategory(category.slug);
+  const leadProject =
+    categoryProjects.find((project) => project.featured) ?? categoryProjects[0];
+  const gridProjects = leadProject
+    ? categoryProjects.filter((project) => project.slug !== leadProject.slug)
+    : categoryProjects;
 
   return (
-    <main className="page stack">
-      <PageHeader
-        eyebrow="Work"
-        title={category.title}
-        status={category.status}
-      />
-      <section className="project-list" aria-label={`${category.title} projects`}>
-        {categoryProjects.map((project) => (
-          <ProjectSummary key={project.slug} project={project} />
-        ))}
-      </section>
+    <main className="page category-page stack">
+      <PageHeader eyebrow="Work" title={category.title} />
+
+      {leadProject ? (
+        <section className="category-feature" aria-label={leadProject.title}>
+          <Link className="category-feature__link media-link" href={`/work/${leadProject.slug}`}>
+            <ResponsiveImage
+              media={leadProject.thumbnail ?? category.cover}
+              sizes="(min-width: 1024px) 70rem, 100vw"
+              priority
+            />
+            <span className="media-link__label">{leadProject.title}</span>
+          </Link>
+        </section>
+      ) : null}
+
+      {gridProjects.length > 0 ? (
+        <section className="project-grid" aria-label={`${category.title} projects`}>
+          {gridProjects.map((project, index) => (
+            <ProjectSummary
+              key={project.slug}
+              project={project}
+              priority={index < 2}
+            />
+          ))}
+        </section>
+      ) : null}
     </main>
   );
 }

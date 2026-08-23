@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getCategoryBySlug,
@@ -7,7 +8,7 @@ import {
 } from "@/content";
 import { ExternalVideo } from "@/components/media/ExternalVideo";
 import { LocalVideo } from "@/components/media/LocalVideo";
-import { MediaPlaceholder } from "@/components/media/MediaPlaceholder";
+import { ResponsiveImage } from "@/components/media/ResponsiveImage";
 import { PageHeader } from "@/components/ui/PageHeader";
 
 type ProjectRouteProps = {
@@ -50,33 +51,44 @@ export default async function ProjectPage({ params }: ProjectRouteProps) {
   const category = getCategoryBySlug(project.categorySlug);
 
   return (
-    <main className="page stack">
-      <PageHeader
-        eyebrow={category?.title ?? "Work"}
-        title={project.title}
-        status={project.status}
-      />
+    <main className="page project-page stack">
+      <PageHeader eyebrow={category?.title ?? "Work"} title={project.title} />
 
-      {project.externalVideo ? (
-        <ExternalVideo video={project.externalVideo} />
-      ) : project.localVideo ? (
-        <LocalVideo media={project.localVideo} title={project.title} />
-      ) : (
-        <MediaPlaceholder label="Media pending" aspectRatio="16 / 9" />
-      )}
+      <section className="project-hero" aria-label={project.title}>
+        {project.externalVideo ? (
+          <ExternalVideo video={project.externalVideo} />
+        ) : project.localVideo ? (
+          <LocalVideo media={project.localVideo} title={project.title} />
+        ) : (
+          <ResponsiveImage media={project.hero ?? project.thumbnail} priority />
+        )}
+      </section>
 
-      {project.unresolved.length > 0 ? (
-        <section className="stack" aria-labelledby="unresolved-heading">
-          <h2 className="section-title" id="unresolved-heading">
-            Unresolved
+      {project.layout === "case-study" && project.gallery ? (
+        <section className="case-study-gallery" aria-labelledby="case-study-heading">
+          <h2 className="section-title" id="case-study-heading">
+            Big Feelings
           </h2>
-          <ul className="plain-list">
-            {project.unresolved.map((item) => (
-              <li key={item}>{item}</li>
+          <div className="case-study-gallery__grid">
+            {project.gallery.map((item) => (
+              <figure className="case-study-gallery__item" key={item.src}>
+                <ResponsiveImage
+                  media={item}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+                {item.caption ? <figcaption>{item.caption}</figcaption> : null}
+              </figure>
             ))}
-          </ul>
+          </div>
         </section>
       ) : null}
+
+      <nav className="project-footer-nav" aria-label="Project navigation">
+        <Link href={category ? `/work/category/${category.slug}` : "/work"}>
+          {category?.title ?? "Work"}
+        </Link>
+        <Link href="/work">Work</Link>
+      </nav>
     </main>
   );
 }

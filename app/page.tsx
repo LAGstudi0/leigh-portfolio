@@ -1,26 +1,47 @@
 import Link from "next/link";
-import { categories, projects } from "@/content";
-import { PageHeader } from "@/components/ui/PageHeader";
+import { categories, getProjectBySlug } from "@/content";
+import { CategoryTile } from "@/components/project/CategoryTile";
+import { ResponsiveImage } from "@/components/media/ResponsiveImage";
 
 export default function HomePage() {
+  const heroProject = getProjectBySlug("hand-drawn-animation-showreel");
+
   return (
-    <main className="page stack">
-      <PageHeader eyebrow="Home" title="Leigh Salvage" />
-      <section className="stack" aria-labelledby="foundation-heading">
-        <h2 className="section-title" id="foundation-heading">
-          Portfolio foundation
+    <main className="page home-page">
+      <section className="home-hero" aria-labelledby="home-title">
+        <div className="home-hero__identity">
+          <p className="eyebrow">Home</p>
+          <h1 className="home-title" id="home-title">
+            Leigh Salvage
+          </h1>
+        </div>
+
+        <Link
+          className="home-hero__media media-link"
+          href="/work/category/hand-drawn-animation"
+          aria-label="View Hand Drawn Animation"
+        >
+          <ResponsiveImage
+            media={heroProject?.thumbnail}
+            priority
+            sizes="(min-width: 1024px) 70rem, 100vw"
+          />
+          <span className="media-link__label">Work</span>
+        </Link>
+      </section>
+
+      <section className="home-work" aria-labelledby="home-work-heading">
+        <h2 className="section-title" id="home-work-heading">
+          Work
         </h2>
-        <p className="muted">
-          {categories.length} work categories and {projects.length} candidate
-          projects are available in structured content.
-        </p>
-        <div className="cluster">
-          <Link className="text-link" href="/work">
-            Work
-          </Link>
-          <Link className="text-link" href="/contact">
-            Contact
-          </Link>
+        <div className="category-grid" aria-label="Work categories">
+          {categories.map((category, index) => (
+            <CategoryTile
+              key={category.slug}
+              category={category}
+              priority={index < 3}
+            />
+          ))}
         </div>
       </section>
     </main>

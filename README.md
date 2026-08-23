@@ -2,7 +2,7 @@
 
 Technical foundation for a media-first creative portfolio for Leigh Salvage.
 
-This repository is currently at Stage 2: project setup, route scaffolding, structured content, base styling tokens, and reusable media primitives. The full visual implementation has not started yet.
+This repository is currently at Stage 3: the primary visual portfolio routes are implemented with selected still-image/poster derivatives, deferred external video embeds, and poster-first local video placeholders. The full video optimization and production QA pass has not started yet.
 
 ## Local Development
 
@@ -102,7 +102,7 @@ public/media/posters/
 public/media/video/
 ```
 
-The placeholder `.gitkeep` files keep those folders available without committing heavy media.
+Stage 3 commits selected lightweight still-image and poster derivatives in `public/media/images/` and `public/media/posters/`. `public/media/video/` remains reserved for later optimized video outputs and is ignored by git except for its `.gitkeep`.
 
 ## Video Strategy
 

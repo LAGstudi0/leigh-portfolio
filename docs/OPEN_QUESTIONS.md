@@ -52,3 +52,13 @@ Audit date: 2026-08-23
 3. Should optimized media derivatives be committed to git or generated outside the repo during deployment?
 4. Is there a target maximum page weight for the homepage or Work index?
 5. Is there a preferred analytics, contact form, or email-only contact approach?
+
+## Stage 3 Implementation Decisions
+
+- The public Work hub now follows the six Canva categories: Music Videos, Big Feelings, Hand Drawn Animation, Social Impact, Explainers, and Trailer Work.
+- The Big Feelings Work tile links directly to `/work/big-feelings` because Canva treats it as a case study. The fallback `/work/category/big-feelings` route remains available and lists the same project.
+- `Isle of Dogs` remains under Hand Drawn Animation for now because the Canva text places "isle of dogs reel" in that section. The client-facing category question remains unresolved.
+- `Sila Lua - Iris (Sumluv Remix)` remains under Hand Drawn Animation for now because Canva lists "sila lua" in the hand-drawn section. The music-video/category overlap remains unresolved.
+- `CEI Global Explainer` and `Episode 05 - The Leak` remain under Social Impact as the least destructive grouping until the client confirms placement.
+- Stage 3 uses lightweight image/poster derivatives under `public/media/images/` and `public/media/posters/`. No large local video sources were copied into `public/`, and no full video transcoding was performed.
+- Contact omits Canva placeholder bio/photo content and shows only the verified email address.

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { MediaAsset } from "@/content/types";
-import { MediaPlaceholder } from "@/components/media/MediaPlaceholder";
 
 type ResponsiveImageProps = {
   media?: MediaAsset;
@@ -14,12 +13,7 @@ export function ResponsiveImage({
   sizes = "(min-width: 1024px) 70rem, 100vw"
 }: ResponsiveImageProps) {
   if (!media?.src || media.type !== "image") {
-    return (
-      <MediaPlaceholder
-        label="Image pending"
-        aspectRatio={media?.aspectRatio ?? "16 / 9"}
-      />
-    );
+    return null;
   }
 
   return (
@@ -29,7 +23,8 @@ export function ResponsiveImage({
       width={media.width ?? 1920}
       height={media.height ?? 1080}
       sizes={sizes}
-      priority={priority}
+      loading={priority ? "eager" : "lazy"}
+      fetchPriority={priority ? "high" : "auto"}
       className="responsive-image"
     />
   );
