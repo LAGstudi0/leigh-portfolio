@@ -30,12 +30,27 @@ export async function generateMetadata({
 
   if (!category) {
     return {
-      title: "Work"
+      title: "Page not found",
+      robots: {
+        index: false,
+        follow: false
+      }
     };
   }
 
+  const description = `${category.title} work by Leigh Salvage.`;
+
   return {
-    title: category.title
+    title: category.title,
+    description,
+    alternates: {
+      canonical: `/work/category/${category.slug}`
+    },
+    openGraph: {
+      title: category.title,
+      description,
+      url: `/work/category/${category.slug}`
+    }
   };
 }
 
@@ -76,7 +91,11 @@ export default async function CategoryPage({ params }: CategoryRouteProps) {
                   preload="metadata"
                   poster={leadProject.localVideo.poster}
                 >
-                  <source src={leadProject.localVideo.src} type="video/mp4" />
+                  <source
+                    src={leadProject.localVideo.src}
+                    type="video/mp4"
+                    media="(prefers-reduced-motion: no-preference)"
+                  />
                 </video>
               </span>
             ) : (

@@ -2,7 +2,7 @@
 
 Media-first creative portfolio for Leigh Salvage, built with Next.js App Router and TypeScript.
 
-This repository is currently at Stage 4: the homepage background, animated wordmark, selected local video derivatives, deferred external embeds, and responsive visual routes are implemented. Final media/performance QA, deployment configuration, and unresolved content approvals are still pending.
+This repository is currently at Stage 5: the visual site, homepage background, animated wordmark, selected local video derivatives, deferred external embeds, responsive routes, metadata, reduced-motion fallbacks, and launch-readiness documentation are implemented. The site is ready for client review, but final launch still depends on media/content approvals documented in `docs/LAUNCH_CHECKLIST.md` and `docs/CLIENT_REVIEW.md`.
 
 ## Local Development
 
@@ -59,9 +59,11 @@ content/
   types.ts
 docs/
   ASSET_INVENTORY.md
+  CLIENT_REVIEW.md
   CONTENT_MAP.md
   DESIGN_ANALYSIS.md
   IMPLEMENTATION_PLAN.md
+  LAUNCH_CHECKLIST.md
   OPEN_QUESTIONS.md
 public/
   media/
@@ -139,13 +141,17 @@ Do not serve large source videos directly from `source-assets/`.
 - `/work/category/[slug]`
 - `/work/[slug]`
 
-The current pages implement the Stage 3/4 visual site. Later stages should focus on final media optimization, route QA, content approvals, and deployment-specific configuration rather than rebuilding the architecture.
+The current pages implement the Stage 5 client-review site. Later work should focus on client content/media approvals, deployment-specific redirects, and any final host-specific launch configuration rather than rebuilding the architecture.
 
 ## Production Notes
 
-- Confirm deployment target before setting final metadata URLs.
-- Confirm public hosting rights before final production launch of local video derivatives.
+- Recommended deployment target: Vercel or another standard Next.js-capable host.
+- Build command: `npm run build`.
+- Runtime/start command: `npm run start` after building, or the host's standard Next.js runtime.
+- No environment variables are currently required.
+- Confirm public hosting rights before final production launch of local project-video derivatives.
 - Use lazy video loading and poster images for performance.
 - Avoid loading multiple third-party video players on index pages.
 - Preserve the `HOME / WORK / CONTACT` top-level navigation unless the client changes direction.
 - Do not deploy until the user explicitly asks for a deployment stage.
+- Before switching `leighsalvage.com`, confirm DNS/hosting ownership and configure redirects listed in `docs/LAUNCH_CHECKLIST.md`.

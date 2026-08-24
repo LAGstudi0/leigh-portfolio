@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type KeyboardEvent } from "react";
 import type { ExternalVideo as ExternalVideoData } from "@/content/types";
 import { AspectBox } from "@/components/media/AspectBox";
 
@@ -30,6 +30,12 @@ export function ExternalVideo({ video }: ExternalVideoProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const embedUrl = useMemo(() => getEmbedUrl(video), [video]);
   const loadVideo = () => setIsLoaded(true);
+  const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      loadVideo();
+    }
+  };
 
   return (
     <AspectBox className="external-video">
@@ -47,6 +53,7 @@ export function ExternalVideo({ video }: ExternalVideoProps) {
           className="external-video__poster"
           type="button"
           onClick={loadVideo}
+          onKeyDown={handleKeyDown}
           onPointerUp={loadVideo}
           aria-label={`Play ${video.title}`}
         >

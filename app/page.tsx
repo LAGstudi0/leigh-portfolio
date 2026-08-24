@@ -19,9 +19,13 @@ export default function HomePage() {
           <source
             src="/media/video/home-background-720.mp4"
             type="video/mp4"
-            media="(max-width: 760px)"
+            media="(prefers-reduced-motion: no-preference) and (max-width: 760px)"
           />
-          <source src="/media/video/home-background-1080.mp4" type="video/mp4" />
+          <source
+            src="/media/video/home-background-1080.mp4"
+            type="video/mp4"
+            media="(prefers-reduced-motion: no-preference)"
+          />
         </video>
 
         <div className="home-screen__brand">

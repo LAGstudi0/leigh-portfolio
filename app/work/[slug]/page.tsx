@@ -31,12 +31,30 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: "Work"
+      title: "Page not found",
+      robots: {
+        index: false,
+        follow: false
+      }
     };
   }
 
+  const category = getCategoryBySlug(project.categorySlug);
+  const description = `${project.title} in the ${
+    category?.title ?? "Work"
+  } section of Leigh Salvage's portfolio.`;
+
   return {
-    title: project.title
+    title: project.title,
+    description,
+    alternates: {
+      canonical: `/work/${project.slug}`
+    },
+    openGraph: {
+      title: project.title,
+      description,
+      url: `/work/${project.slug}`
+    }
   };
 }
 

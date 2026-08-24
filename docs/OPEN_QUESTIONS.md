@@ -90,3 +90,11 @@ The current `leighsalvage.com` site was inspected during Stage 4 as a secondary 
 3. Confirm whether CEI, EP05 The Leak, Pixie Melody, and local Sila Lua media should receive hosted video derivatives.
 4. Confirm whether the header logo should animate on all pages or only on the homepage.
 5. Confirm whether social profile links from the current live site should be added to Contact.
+
+## Stage 5 Implementation Decisions
+
+- Stage 5 fixed the mobile navigation so `HOME / WORK / CONTACT` remains visible at 320 px and above.
+- Stage 5 added explicit keyboard activation for deferred external-video posters so Enter and Space both load the intended player.
+- Stage 5 added production metadata, favicon, robots, sitemap, and custom 404 handling.
+- Stage 5 verified reduced-motion fallback behavior for the homepage background video and animated logo.
+- Stage 5 did not resolve client approval questions. The concise client-facing review list now lives in `docs/CLIENT_REVIEW.md`.

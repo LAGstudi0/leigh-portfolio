@@ -35,7 +35,11 @@ export function AnimatedLogo({
         preload={priority ? "auto" : "metadata"}
         poster="/media/branding/leigh-logo-static.png"
       >
-        <source src="/media/branding/leigh-logo.webm" type="video/webm" />
+        <source
+          src="/media/branding/leigh-logo.webm"
+          type="video/webm"
+          media="(prefers-reduced-motion: no-preference)"
+        />
       </video>
     </span>
   );

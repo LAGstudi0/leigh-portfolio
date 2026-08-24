@@ -3,7 +3,18 @@ import { CategoryTile } from "@/components/project/CategoryTile";
 import { PageHeader } from "@/components/ui/PageHeader";
 
 export const metadata = {
-  title: "Work"
+  title: "Work",
+  description:
+    "Work by Leigh Salvage across music videos, animation, explainers, trailer work, social impact, and Big Feelings.",
+  alternates: {
+    canonical: "/work"
+  },
+  openGraph: {
+    title: "Work",
+    description:
+      "Work by Leigh Salvage across music videos, animation, explainers, trailer work, social impact, and Big Feelings.",
+    url: "/work"
+  }
 };
 
 export default function WorkPage() {

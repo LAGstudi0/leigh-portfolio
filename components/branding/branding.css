@@ -21,6 +21,7 @@
 
 .animated-logo__motion {
   z-index: 1;
+  mix-blend-mode: screen;
 }
 
 .animated-logo--header {

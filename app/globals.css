@@ -327,6 +327,22 @@ button {
   color: var(--color-accent);
 }
 
+.not-found-page {
+  min-height: calc(100svh - var(--header-height));
+  align-content: center;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-top: var(--space-5);
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 @media (min-width: 700px) {
   .page {
     padding-top: var(--space-7);

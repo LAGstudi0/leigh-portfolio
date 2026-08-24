@@ -1,7 +1,16 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 
 export const metadata = {
-  title: "Contact"
+  title: "Contact",
+  description: "Contact Leigh Salvage.",
+  alternates: {
+    canonical: "/contact"
+  },
+  openGraph: {
+    title: "Contact",
+    description: "Contact Leigh Salvage.",
+    url: "/contact"
+  }
 };
 
 export default function ContactPage() {
