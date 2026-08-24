@@ -12,7 +12,11 @@ build/
 
 # generated media derivatives
 public/media/video/*
+!public/media/video/projects/
 !public/media/video/.gitkeep
+!public/media/video/home-background-1080.mp4
+!public/media/video/home-background-720.mp4
+!public/media/video/projects/*.mp4
 
 # client source material
 source-assets/

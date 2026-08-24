@@ -29,6 +29,7 @@ function getEmbedUrl(video: ExternalVideoData) {
 export function ExternalVideo({ video }: ExternalVideoProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const embedUrl = useMemo(() => getEmbedUrl(video), [video]);
+  const loadVideo = () => setIsLoaded(true);
 
   return (
     <AspectBox className="external-video">
@@ -36,6 +37,7 @@ export function ExternalVideo({ video }: ExternalVideoProps) {
         <iframe
           src={embedUrl}
           title={video.title}
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
@@ -44,7 +46,8 @@ export function ExternalVideo({ video }: ExternalVideoProps) {
         <button
           className="external-video__poster"
           type="button"
-          onClick={() => setIsLoaded(true)}
+          onClick={loadVideo}
+          onPointerUp={loadVideo}
           aria-label={`Play ${video.title}`}
         >
           {video.thumbnail ? (

@@ -1,36 +1,38 @@
-import Link from "next/link";
-import { categories, getProjectBySlug } from "@/content";
+import { AnimatedLogo } from "@/components/branding/AnimatedLogo";
 import { CategoryTile } from "@/components/project/CategoryTile";
-import { ResponsiveImage } from "@/components/media/ResponsiveImage";
+import { categories } from "@/content";
 
 export default function HomePage() {
-  const heroProject = getProjectBySlug("hand-drawn-animation-showreel");
-
   return (
-    <main className="page home-page">
-      <section className="home-hero" aria-labelledby="home-title">
-        <div className="home-hero__identity">
-          <p className="eyebrow">Home</p>
-          <h1 className="home-title" id="home-title">
-            Leigh Salvage
+    <main className="home-page">
+      <section className="home-screen" aria-labelledby="home-title">
+        <video
+          className="home-screen__video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/media/posters/home-background.webp"
+          aria-hidden="true"
+        >
+          <source
+            src="/media/video/home-background-720.mp4"
+            type="video/mp4"
+            media="(max-width: 760px)"
+          />
+          <source src="/media/video/home-background-1080.mp4" type="video/mp4" />
+        </video>
+
+        <div className="home-screen__brand">
+          <h1 className="home-screen__title" id="home-title">
+            <span className="visually-hidden">Leigh Salvage</span>
+            <AnimatedLogo variant="hero" priority />
           </h1>
         </div>
-
-        <Link
-          className="home-hero__media media-link"
-          href="/work/category/hand-drawn-animation"
-          aria-label="View Hand Drawn Animation"
-        >
-          <ResponsiveImage
-            media={heroProject?.thumbnail}
-            priority
-            sizes="(min-width: 1024px) 70rem, 100vw"
-          />
-          <span className="media-link__label">Work</span>
-        </Link>
       </section>
 
-      <section className="home-work" aria-labelledby="home-work-heading">
+      <section className="page home-work" aria-labelledby="home-work-heading">
         <h2 className="section-title" id="home-work-heading">
           Work
         </h2>

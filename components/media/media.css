@@ -58,6 +58,11 @@
   transform: scale(1.02);
 }
 
+.external-video__poster:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -0.5rem;
+}
+
 .external-video__play {
   position: relative;
   z-index: 1;
@@ -75,8 +80,13 @@
   text-transform: uppercase;
 }
 
+.local-video-frame,
 .local-video-poster {
   background: var(--color-surface-strong);
+}
+
+.local-video {
+  object-fit: cover;
 }
 
 @media (max-width: 520px) {

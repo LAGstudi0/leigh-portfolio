@@ -2,15 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { AnimatedLogo } from "@/components/branding/AnimatedLogo";
 import { siteNavItems } from "@/lib/routes";
 
 export function SiteNavigation() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
-    <header className="site-header">
+    <header className={isHome ? "site-header site-header--home" : "site-header"}>
       <Link className="site-logo" href="/" aria-label="Leigh Salvage home">
-        Leigh Salvage
+        <AnimatedLogo />
       </Link>
       <nav aria-label="Primary navigation">
         <ul className="site-nav-list">

@@ -23,6 +23,7 @@ export function ResponsiveImage({
       width={media.width ?? 1920}
       height={media.height ?? 1080}
       sizes={sizes}
+      preload={priority}
       loading={priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : "auto"}
       className="responsive-image"

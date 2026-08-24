@@ -159,3 +159,26 @@ Primary design reference:
 - Some Canva blocks are clearly placeholders rather than final art.
 - Several local assets are category/project stills, but exact routing cannot be proven without client confirmation.
 - Contact/about copy in Canva is placeholder text and should not be shipped as production content.
+
+## Stage 4 Live-Site Reference Check
+
+The current `leighsalvage.com` site was inspected during Stage 4 as a secondary reference. It supports, but does not replace, the Canva design analysis.
+
+### Confirmed from live site
+
+- The homepage uses a full-screen animated background, and the local `backgroundVideo.mp4` is byte-identical to the live homepage MP4.
+- The Leigh Salvage wordmark appears as an animated brand asset, matching the role of local `leigh.mov`.
+- The top-level navigation remains `HOME`, `WORK`, and `CONTACT`.
+- The visual language remains sparse, dark, media-led, and uppercase.
+
+### Differences from Canva/source audit
+
+- The live Work IA is smaller than the Canva/source audit: it emphasizes Big Feelings, Maxi Millz, Metamorphosis, TRAILD, Orikan, and Trailer Work.
+- Canva and local assets support a broader category grid: Music Videos, Big Feelings, Hand Drawn Animation, Social Impact, Explainers, and Trailer Work.
+- Stage 4 keeps the broader Canva/source-based IA and uses the live site only to validate the homepage background and logo behavior.
+
+### Implemented in Stage 4
+
+- Homepage: full-viewport background video, animated wordmark, poster fallback, reduced-motion fallback.
+- Header: real wordmark asset replaces the temporary text logo.
+- Motion: restrained CSS entrance/hover motion only, disabled or simplified for reduced-motion users.

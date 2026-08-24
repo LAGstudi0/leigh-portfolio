@@ -14,16 +14,39 @@
   backdrop-filter: blur(14px);
 }
 
+.site-header--home {
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.site-header--home::before {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: -1;
+  height: 9rem;
+  content: "";
+  background: linear-gradient(
+    180deg,
+    rgba(5, 5, 5, 0.42) 0%,
+    rgba(5, 5, 5, 0) 100%
+  );
+  pointer-events: none;
+}
+
 .site-logo {
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(6.75rem, 15vw, 12rem);
   color: var(--color-text);
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
   line-height: 1;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition: color var(--transition-fast);
+  filter: drop-shadow(0 0.15rem 0.65rem rgba(0, 0, 0, 0.56));
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .site-nav-list {
@@ -37,18 +60,23 @@
 
 .site-nav-link {
   color: var(--color-text);
-  font-size: 0.78rem;
+  font-size: clamp(0.78rem, 1.3vw, 1.05rem);
   font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
   border-bottom: 1px solid transparent;
+  text-shadow: 0 0.1rem 0.75rem rgba(0, 0, 0, 0.72);
   transition:
     border-color var(--transition-fast),
     color var(--transition-fast),
     opacity var(--transition-fast);
 }
 
-.site-logo:hover,
+.site-logo:hover {
+  opacity: 0.82;
+  transform: translateY(-1px);
+}
+
 .site-nav-link:hover {
   color: var(--color-accent);
 }
@@ -59,17 +87,22 @@
 
 @media (max-width: 520px) {
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: var(--space-3);
+    min-height: auto;
+    gap: var(--space-4);
+    padding-block: var(--space-4);
   }
 
   .site-logo {
-    font-size: 1rem;
+    width: clamp(5.75rem, 29vw, 7.5rem);
   }
 
   .site-nav-list {
+    justify-content: flex-end;
     gap: var(--space-3);
+  }
+
+  .site-nav-link {
+    font-size: 0.72rem;
   }
 }
 
@@ -79,6 +112,12 @@
   }
 
   .site-logo {
-    font-size: 1.65rem;
+    width: clamp(9.5rem, 16vw, 13.5rem);
+  }
+}
+
+@media (min-width: 1180px) {
+  .site-header--home .site-nav-link {
+    font-size: 1.35rem;
   }
 }

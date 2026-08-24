@@ -61,11 +61,31 @@ export default async function CategoryPage({ params }: CategoryRouteProps) {
       {leadProject ? (
         <section className="category-feature" aria-label={leadProject.title}>
           <Link className="category-feature__link media-link" href={`/work/${leadProject.slug}`}>
-            <ResponsiveImage
-              media={leadProject.thumbnail ?? category.cover}
-              sizes="(min-width: 1024px) 70rem, 100vw"
-              priority
-            />
+            {leadProject.localVideo?.src ? (
+              <span className="video-preview" aria-hidden="true">
+                <img
+                  src={leadProject.localVideo.poster ?? leadProject.thumbnail?.src}
+                  alt=""
+                  loading="eager"
+                />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster={leadProject.localVideo.poster}
+                >
+                  <source src={leadProject.localVideo.src} type="video/mp4" />
+                </video>
+              </span>
+            ) : (
+              <ResponsiveImage
+                media={leadProject.thumbnail ?? category.cover}
+                sizes="(min-width: 1024px) 70rem, 100vw"
+                priority
+              />
+            )}
             <span className="media-link__label">{leadProject.title}</span>
           </Link>
         </section>

@@ -23,15 +23,20 @@ export function LocalVideo({ media, title }: LocalVideoProps) {
   }
 
   return (
-    <video
-      className="local-video"
-      controls
-      playsInline
-      preload="none"
-      poster={media.poster}
-      aria-label={title}
+    <AspectBox
+      aspectRatio={media.aspectRatio ?? "16 / 9"}
+      className="local-video-frame"
     >
-      <source src={media.src} type="video/mp4" />
-    </video>
+      <video
+        className="local-video"
+        controls
+        playsInline
+        preload="none"
+        poster={media.poster}
+        aria-label={title}
+      >
+        <source src={media.src} type="video/mp4" />
+      </video>
+    </AspectBox>
   );
 }

@@ -101,3 +101,10 @@ Do not add more top-level navigation unless the client requests it.
 - `Music Videos.png` is a broad music-video still, but its specific project relationship is unclear.
 - The Canva "Social Impact" tile is present, but no dedicated Social Impact page text is visible beyond the tile; CEI Global and EP05 The Leak are likely candidates but not confirmed.
 - Canva contains placeholder copy for the contact/about page and Big Feelings description, so production copy is still missing.
+
+## Stage 4 Content Implementation Notes
+
+- The `/` homepage now uses `backgroundVideo.mp4` derivatives as brand atmosphere, not as a portfolio project.
+- Local project video derivatives are available for Big Feelings, Cacophony, Daydream, Detector Inspector, Hand Drawn Animation Showreel, Marketbase+, and The Metamorphic Rainbow.
+- CEI Global, EP05 The Leak, Pixie Melody, and local Sila Lua remain poster/external-only until the client confirms category/public-use decisions.
+- The current live site has a smaller Work structure than Canva. Stage 4 keeps the fuller Canva/source-asset structure while noting live-site metadata as review material, not as automatic copy.

@@ -85,6 +85,10 @@ button {
   background: var(--color-bg);
 }
 
+.site-shell:has(.home-screen) {
+  background: #050505;
+}
+
 .page {
   width: min(100%, calc(var(--page-max) + var(--page-gutter) * 2));
   margin: 0 auto;
@@ -163,13 +167,16 @@ button {
   border: 0;
 }
 
-.home-page,
 .work-page,
 .category-page,
 .project-page,
 .contact-page {
   display: grid;
   gap: var(--space-8);
+}
+
+.home-page {
+  display: block;
 }
 
 .category-page,
@@ -181,31 +188,50 @@ button {
   gap: var(--space-6);
 }
 
-.home-hero {
+.home-screen {
+  position: relative;
   display: grid;
-  gap: var(--space-4);
-  align-content: start;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: calc(var(--header-height) + var(--space-6)) var(--page-gutter)
+    var(--space-7);
+  place-items: center;
+  background:
+    linear-gradient(rgba(5, 5, 5, 0.04), rgba(5, 5, 5, 0.18)),
+    url("/media/posters/home-background.webp") center / cover no-repeat,
+    var(--color-bg);
 }
 
-.home-hero__identity {
-  display: grid;
-  gap: var(--space-3);
+.home-screen::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 34svh;
+  content: "";
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0) 0%, #050505 100%);
+  pointer-events: none;
 }
 
-.home-title {
-  max-width: 10ch;
+.home-screen__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-screen__brand {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(84vw, 52rem);
+  place-items: center;
+  filter: drop-shadow(0 0.4rem 2.8rem rgba(0, 0, 0, 0.68));
+}
+
+.home-screen__title {
+  width: 100%;
   margin: 0;
-  font-family: var(--font-display);
-  font-size: 3.75rem;
-  font-weight: 700;
-  line-height: 0.92;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.home-hero__media {
-  width: min(100%, 40rem);
-  align-self: center;
 }
 
 .project-footer-nav a {
@@ -223,6 +249,7 @@ button {
 .home-work {
   display: grid;
   gap: var(--space-5);
+  padding-top: var(--space-7);
 }
 
 .category-feature {
@@ -317,10 +344,6 @@ button {
     font-size: 2.7rem;
   }
 
-  .home-title {
-    font-size: 5.2rem;
-  }
-
   .category-page .page-header,
   .project-page .page-header {
     min-height: 7rem;
@@ -337,6 +360,78 @@ button {
 
   .contact-email {
     font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-screen {
+    min-height: 100svh;
+    padding-top: 6.25rem;
+    padding-bottom: var(--space-6);
+    place-items: end center;
+  }
+
+  .home-screen__video {
+    object-position: 48% center;
+  }
+
+  .home-screen__brand {
+    width: min(92vw, 28rem);
+    margin-bottom: 14svh;
+  }
+}
+
+@media (min-width: 1180px) {
+  .home-screen__brand {
+    transform: translateY(2svh);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-screen__brand,
+  .page-header,
+  .category-grid,
+  .project-grid,
+  .project-hero,
+  .case-study-gallery,
+  .contact-panel {
+    animation: stage-enter 620ms ease both;
+  }
+
+  .category-tile,
+  .project-summary,
+  .case-study-gallery__item {
+    animation: stage-enter 720ms ease both;
+  }
+
+  .category-tile:nth-child(2),
+  .project-summary:nth-child(2),
+  .case-study-gallery__item:nth-child(2) {
+    animation-delay: 60ms;
+  }
+
+  .category-tile:nth-child(3),
+  .project-summary:nth-child(3),
+  .case-study-gallery__item:nth-child(3) {
+    animation-delay: 120ms;
+  }
+
+  @keyframes stage-enter {
+    from {
+      opacity: 0;
+      transform: translateY(0.85rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-screen__video {
+    display: none;
   }
 }
 

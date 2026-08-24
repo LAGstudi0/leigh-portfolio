@@ -243,6 +243,7 @@ export const projects: Project[] = [
     },
     localVideo: {
       type: "video",
+      src: "/media/video/projects/detector-inspector-access-issues.mp4",
       poster: "/media/posters/detector-inspector-access-issues.webp",
       aspectRatio: "16 / 9"
     },
@@ -271,6 +272,7 @@ export const projects: Project[] = [
     },
     localVideo: {
       type: "video",
+      src: "/media/video/projects/marketbase-plus.mp4",
       poster: "/media/posters/marketbase-plus.webp",
       aspectRatio: "16 / 9"
     },
@@ -366,6 +368,7 @@ export const projects: Project[] = [
     },
     localVideo: {
       type: "video",
+      src: "/media/video/projects/hand-drawn-animation-showreel.mp4",
       poster: "/media/images/hand-drawn-animation.webp",
       aspectRatio: "16 / 9"
     },
@@ -402,6 +405,7 @@ export const projects: Project[] = [
     },
     localVideo: {
       type: "video",
+      src: "/media/video/projects/the-metamorphic-rainbow.mp4",
       poster: "/media/posters/the-metamorphic-rainbow.webp",
       aspectRatio: "16 / 9"
     },
@@ -441,6 +445,7 @@ export const projects: Project[] = [
     },
     localVideo: {
       type: "video",
+      src: "/media/video/projects/cacophony.mp4",
       poster: "/media/images/cacophony.webp",
       aspectRatio: "16 / 9"
     },
@@ -506,6 +511,7 @@ export const projects: Project[] = [
     },
     localVideo: {
       type: "video",
+      src: "/media/video/projects/daydream.mp4",
       poster: "/media/posters/daydream.webp",
       aspectRatio: "16 / 9"
     },
@@ -604,6 +610,7 @@ export const projects: Project[] = [
     },
     localVideo: {
       type: "video",
+      src: "/media/video/projects/big-feelings-episode-05-a-storms-brewing.mp4",
       poster: "/media/images/big-feelings.webp",
       aspectRatio: "16 / 9"
     },

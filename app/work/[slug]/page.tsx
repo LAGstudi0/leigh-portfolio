@@ -70,10 +70,11 @@ export default async function ProjectPage({ params }: ProjectRouteProps) {
             Big Feelings
           </h2>
           <div className="case-study-gallery__grid">
-            {project.gallery.map((item) => (
+            {project.gallery.map((item, index) => (
               <figure className="case-study-gallery__item" key={item.src}>
                 <ResponsiveImage
                   media={item}
+                  priority={index < 2}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 {item.caption ? <figcaption>{item.caption}</figcaption> : null}

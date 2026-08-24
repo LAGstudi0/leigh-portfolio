@@ -161,6 +161,18 @@ Required derivative candidates:
 - Hand Drawn Animation: looping showreel plus projects listed in Canva.
 - Big Feelings: richer case-study page with episode, character/process assets, backgrounds, and description once copy is supplied.
 
+## Stage 4 Implementation Notes
+
+- Homepage background delivery is now implemented with `public/media/video/home-background-1080.mp4`, `public/media/video/home-background-720.mp4`, and `public/media/posters/home-background.webp`.
+- Animated branding is now implemented with `public/media/branding/leigh-logo.webm` plus `public/media/branding/leigh-logo-static.png` fallback.
+- The header and homepage use the derived wordmark; the homepage header overlays the video while inner pages keep the sticky dark header.
+- Local project video derivatives are integrated only on detail/category routes. The Work index remains still-image based for performance.
+- Narrative/local project videos use native controls and `preload="none"` through `LocalVideo`.
+- External YouTube/Vimeo embeds are still deferred through poster-first `ExternalVideo`.
+- The Hand Drawn Animation category lead uses a muted looping showreel preview and falls back to still imagery for reduced-motion users.
+- Stage 4 did not add final project copy, credits, dates, contact biography, social links, or analytics.
+- Stage 4 did not deploy the site.
+
 ## Performance Plan
 
 - Use `next/image` or static image elements with explicit dimensions/aspect-ratio.
@@ -169,6 +181,8 @@ Required derivative candidates:
 - Use poster images as the primary Work index payload.
 - Consider route-level splitting and simple client components only where interaction is needed.
 - Compress PNG artwork into WebP/AVIF derivatives while preserving original source files.
+- Keep the homepage video isolated to `/`; do not include it in shared layout or content data.
+- Keep large local videos behind user intent on project pages, not the Work index.
 
 ## Accessibility Plan
 

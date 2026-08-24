@@ -62,3 +62,31 @@ Audit date: 2026-08-23
 - `CEI Global Explainer` and `Episode 05 - The Leak` remain under Social Impact as the least destructive grouping until the client confirms placement.
 - Stage 3 uses lightweight image/poster derivatives under `public/media/images/` and `public/media/posters/`. No large local video sources were copied into `public/`, and no full video transcoding was performed.
 - Contact omits Canva placeholder bio/photo content and shows only the verified email address.
+
+## Stage 4 Implementation Decisions
+
+- `backgroundVideo.mp4` is now treated as a homepage/brand background asset, not as a public portfolio project. It has dedicated 1080p and 720p derivatives under `public/media/video/`.
+- `leigh.mov` is now used as the source for the animated Leigh Salvage wordmark. The browser-facing files are `public/media/branding/leigh-logo.webm` and `public/media/branding/leigh-logo-static.png`.
+- The homepage now uses a full-viewport muted looping background video with a poster fallback and reduced-motion fallback.
+- The Hand Drawn Animation category lead uses the optimized showreel as a muted looping preview. Project detail pages use native controls and `preload="none"`.
+- External YouTube/Vimeo work remains poster-first; iframes are created only after the visitor activates Play.
+- Local derivatives were created and integrated for Big Feelings, Cacophony, Daydream, Detector Inspector, Hand Drawn Animation Showreel, Marketbase+, and The Metamorphic Rainbow.
+- Local derivatives were intentionally not created for CEI, EP05 The Leak, Pixie Melody, or the downloaded Sila Lua MP4 until placement/public-use questions are resolved.
+
+## Current Live Site Reference Notes
+
+The current `leighsalvage.com` site was inspected during Stage 4 as a secondary reference only. Canva remains the primary design source.
+
+- The live homepage uses the same `backgroundVideo.mp4` file now present in local source assets.
+- The live homepage uses an animated Leigh Salvage wordmark matching the `leigh.mov` animation concept.
+- The live site confirms `HOME / WORK / CONTACT`, the email `leigh.salvage@gmail.com`, and social links for Vimeo, Instagram, and LinkedIn.
+- The live site exposes a smaller Work IA: Big Feelings, Maxi Millz, Metamorphosis, TRAILD, Orikan, and Trailer Work. This differs from the fuller Canva/source-asset map.
+- The live Big Feelings page contains useful copy/client/role details, but those details should be client-reviewed before merging into the portfolio content model because Stage 1 treated project metadata as unresolved.
+
+## Remaining After Stage 4
+
+1. Confirm whether the live-site Big Feelings copy and client/role details are approved for reuse.
+2. Confirm whether selected local project video derivatives may be publicly hosted in production.
+3. Confirm whether CEI, EP05 The Leak, Pixie Melody, and local Sila Lua media should receive hosted video derivatives.
+4. Confirm whether the header logo should animate on all pages or only on the homepage.
+5. Confirm whether social profile links from the current live site should be added to Contact.

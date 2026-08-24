@@ -13,11 +13,11 @@ export default function WorkPage() {
       <section className="category-grid" aria-label="Work categories">
         {categories.map((category, index) => (
           <CategoryTile
-              key={category.slug}
-              category={category}
-              priority={index < 3}
-            />
-          ))}
+            key={category.slug}
+            category={category}
+            priority={index < 6}
+          />
+        ))}
       </section>
     </main>
   );

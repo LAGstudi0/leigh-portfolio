@@ -99,3 +99,37 @@ The repository currently contains only `.DS_Store`, `source-assets/`, and the au
 - Poster frames required for every local video.
 - Still image derivatives recommended for every PNG used in production, especially the large Big Feelings backgrounds and all `_Paulo` 1920x1080 PNGs.
 - AVIF assets are efficient but need browser fallback planning depending on target compatibility.
+
+## Stage 4 Production Derivatives
+
+Stage 4 introduced selected web-ready derivatives without modifying originals in `source-assets/`.
+
+### Homepage and Branding
+
+| Source asset | Production derivative | Size | Notes |
+|---|---|---:|---|
+| `backgroundVideo.mp4` | `public/media/video/home-background-1080.mp4` | 11 MB | Homepage-only muted looping background, 1920x1080 H.264 MP4, audio removed. |
+| `backgroundVideo.mp4` | `public/media/video/home-background-720.mp4` | 5.4 MB | Mobile/lower-bandwidth homepage background variant, 1280x720 H.264 MP4, audio removed. |
+| `backgroundVideo.mp4` | `public/media/posters/home-background.webp` | 24 KB | Poster/fallback image for the homepage background. |
+| `leigh.mov` | `public/media/branding/leigh-logo.webm` | 660 KB | Transparent VP9 WebM animated wordmark. Used for the homepage/header logo where supported. |
+| `leigh.mov` | `public/media/branding/leigh-logo-static.png` | 104 KB | Transparent static PNG fallback for Safari/reduced motion and poster use. |
+
+`backgroundVideo.mp4` was not treated as portfolio project content; it is a site identity/homepage atmosphere asset. The current live site at `leighsalvage.com` uses a byte-identical MP4 file, confirming it is intended for the homepage treatment.
+
+### Selected Local Project Videos
+
+These derivatives are wired into `content/projects.ts` and remain poster-first/native-control videos on project detail pages. They are not loaded on the homepage or Work index.
+
+| Project | Source asset | Production derivative | Size | Treatment |
+|---|---|---|---:|---|
+| Big Feelings | `_Paulo/BIG FEELINGS/BIG FEELINGS - Episode 05 - A Storm's Brewing_v7.mp4` | `public/media/video/projects/big-feelings-episode-05-a-storms-brewing.mp4` | 16 MB | Controlled project video, no preload. |
+| Cacophony | `Cacophony.mp4` | `public/media/video/projects/cacophony.mp4` | 14 MB | Controlled project video, no preload. |
+| Daydream | `daydream.mp4` | `public/media/video/projects/daydream.mp4` | 2.6 MB | Controlled project video, no preload. |
+| Detector Inspector | `Detector Inspector_Access Issues_v7.mp4` | `public/media/video/projects/detector-inspector-access-issues.mp4` | 3.0 MB | Controlled project video, no preload. |
+| Hand Drawn Animation Showreel | `Hand drawn Anim Showreel.mp4` | `public/media/video/projects/hand-drawn-animation-showreel.mp4` | 7.5 MB | Controlled project video; muted loop only as the Hand Drawn category lead preview. |
+| Marketbase+ | `Marketbase+_v4.mp4` | `public/media/video/projects/marketbase-plus.mp4` | 6.6 MB | Controlled project video, no preload. |
+| The Metamorphic Rainbow | `The_Metamorphic_Rainbow.mp4` | `public/media/video/projects/the-metamorphic-rainbow.mp4` | 5.5 MB | Controlled project video, no preload. |
+
+### Still Deferred
+
+No public video derivative was created for `CEI_Global_Explainer_Story2.mp4`, `EP05_The_Leak_v4.mp4`, `Pixie_Melody_Animation_V7.mov`, or the local `Y2Mate.is - Sila Lua...mp4` file during Stage 4. Those files still require clearer public-use/category decisions before hosting.
