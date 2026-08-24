@@ -1,11 +1,11 @@
-import { AnimatedLogo } from "@/components/branding/AnimatedLogo";
 import { CategoryTile } from "@/components/project/CategoryTile";
 import { categories } from "@/content";
 
 export default function HomePage() {
   return (
     <main className="home-page">
-      <section className="home-screen" aria-labelledby="home-title">
+      <h1 className="visually-hidden">Leigh Salvage</h1>
+      <section className="home-screen" aria-label="Leigh Salvage">
         <video
           className="home-screen__video"
           autoPlay
@@ -27,13 +27,6 @@ export default function HomePage() {
             media="(prefers-reduced-motion: no-preference)"
           />
         </video>
-
-        <div className="home-screen__brand">
-          <h1 className="home-screen__title" id="home-title">
-            <span className="visually-hidden">Leigh Salvage</span>
-            <AnimatedLogo variant="hero" priority />
-          </h1>
-        </div>
       </section>
 
       <section className="page home-work" aria-labelledby="home-work-heading">

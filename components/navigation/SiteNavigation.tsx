@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatedLogo } from "@/components/branding/AnimatedLogo";
+import { BrandLogo } from "@/components/branding/BrandLogo";
 import { siteNavItems } from "@/lib/routes";
 
 export function SiteNavigation() {
@@ -12,7 +12,7 @@ export function SiteNavigation() {
   return (
     <header className={isHome ? "site-header site-header--home" : "site-header"}>
       <Link className="site-logo" href="/" aria-label="Leigh Salvage home">
-        <AnimatedLogo />
+        <BrandLogo priority />
       </Link>
       <nav aria-label="Primary navigation">
         <ul className="site-nav-list">

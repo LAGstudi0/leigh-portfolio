@@ -220,20 +220,6 @@ button {
   object-position: center;
 }
 
-.home-screen__brand {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  width: min(84vw, 52rem);
-  place-items: center;
-  filter: drop-shadow(0 0.4rem 2.8rem rgba(0, 0, 0, 0.68));
-}
-
-.home-screen__title {
-  width: 100%;
-  margin: 0;
-}
-
 .project-footer-nav a {
   border-bottom: 1px solid transparent;
   transition:
@@ -390,21 +376,9 @@ button {
   .home-screen__video {
     object-position: 48% center;
   }
-
-  .home-screen__brand {
-    width: min(92vw, 28rem);
-    margin-bottom: 14svh;
-  }
-}
-
-@media (min-width: 1180px) {
-  .home-screen__brand {
-    transform: translateY(2svh);
-  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .home-screen__brand,
   .page-header,
   .category-grid,
   .project-grid,

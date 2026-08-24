@@ -108,10 +108,10 @@ public/media/video/
 
 Stage 3 committed selected lightweight still-image and poster derivatives in `public/media/images/` and `public/media/posters/`.
 
-Stage 4 adds intentional production media derivatives:
+Stage 4/5 adds intentional production media derivatives:
 
-- `public/media/branding/leigh-logo.webm`
-- `public/media/branding/leigh-logo-static.png`
+- `public/media/branding/logo.gif`
+- `public/media/branding/logo-static.png`
 - `public/media/posters/home-background.webp`
 - `public/media/video/home-background-1080.mp4`
 - `public/media/video/home-background-720.mp4`
@@ -129,7 +129,7 @@ The media components are poster-first and defer expensive playback:
 - `components/media/MediaPlaceholder.tsx` keeps layout stable before derivatives exist.
 - The homepage background video is isolated to `/` and uses muted looping MP4 variants with a WebP poster.
 - The Hand Drawn Animation category lead can use the optimized showreel as a muted looping preview.
-- `components/branding/AnimatedLogo.tsx` uses a transparent WebM wordmark with a static PNG fallback and reduced-motion fallback.
+- `components/branding/BrandLogo.tsx` uses the approved GIF wordmark with a static PNG reduced-motion fallback derived from the GIF.
 
 Do not serve large source videos directly from `source-assets/`.
 

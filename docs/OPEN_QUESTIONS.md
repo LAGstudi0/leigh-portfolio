@@ -66,7 +66,7 @@ Audit date: 2026-08-23
 ## Stage 4 Implementation Decisions
 
 - `backgroundVideo.mp4` is now treated as a homepage/brand background asset, not as a public portfolio project. It has dedicated 1080p and 720p derivatives under `public/media/video/`.
-- `leigh.mov` is now used as the source for the animated Leigh Salvage wordmark. The browser-facing files are `public/media/branding/leigh-logo.webm` and `public/media/branding/leigh-logo-static.png`.
+- Stage 4 initially used `leigh.mov` for the animated Leigh Salvage wordmark; this has been superseded by the Logo Correction below.
 - The homepage now uses a full-viewport muted looping background video with a poster fallback and reduced-motion fallback.
 - The Hand Drawn Animation category lead uses the optimized showreel as a muted looping preview. Project detail pages use native controls and `preload="none"`.
 - External YouTube/Vimeo work remains poster-first; iframes are created only after the visitor activates Play.
@@ -98,3 +98,9 @@ The current `leighsalvage.com` site was inspected during Stage 4 as a secondary 
 - Stage 5 added production metadata, favicon, robots, sitemap, and custom 404 handling.
 - Stage 5 verified reduced-motion fallback behavior for the homepage background video and animated logo.
 - Stage 5 did not resolve client approval questions. The concise client-facing review list now lives in `docs/CLIENT_REVIEW.md`.
+
+## Logo Correction
+
+- The primary visible site logo is now `source-assets/wetransfer_the_metamorphic_rainbow-mp4_2026-07-26_0615/logo.gif`, copied for production as `public/media/branding/logo.gif`.
+- The old `leigh.mov` browser derivatives are no longer used for the visible site logo.
+- The homepage center logo has been removed; the homepage should show the background video plus the navigation/header logo only.

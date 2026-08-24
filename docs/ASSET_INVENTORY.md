@@ -111,8 +111,8 @@ Stage 4 introduced selected web-ready derivatives without modifying originals in
 | `backgroundVideo.mp4` | `public/media/video/home-background-1080.mp4` | 11 MB | Homepage-only muted looping background, 1920x1080 H.264 MP4, audio removed. |
 | `backgroundVideo.mp4` | `public/media/video/home-background-720.mp4` | 5.4 MB | Mobile/lower-bandwidth homepage background variant, 1280x720 H.264 MP4, audio removed. |
 | `backgroundVideo.mp4` | `public/media/posters/home-background.webp` | 24 KB | Poster/fallback image for the homepage background. |
-| `leigh.mov` | `public/media/branding/leigh-logo.webm` | 660 KB | Transparent VP9 WebM animated wordmark. Used for the homepage/header logo where supported. |
-| `leigh.mov` | `public/media/branding/leigh-logo-static.png` | 104 KB | Transparent static PNG fallback for Safari/reduced motion and poster use. |
+| `logo.gif` | `public/media/branding/logo.gif` | 280 KB | Approved animated GIF wordmark. Used as the visible navigation/header logo. |
+| `logo.gif` | `public/media/branding/logo-static.png` | 7 KB | Static PNG frame derived from the approved GIF for reduced-motion fallback. |
 
 `backgroundVideo.mp4` was not treated as portfolio project content; it is a site identity/homepage atmosphere asset. The current live site at `leighsalvage.com` uses a byte-identical MP4 file, confirming it is intended for the homepage treatment.
 

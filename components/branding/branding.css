@@ -1,39 +1,11 @@
-.animated-logo {
-  position: relative;
+.brand-logo {
   display: block;
   width: 100%;
-  aspect-ratio: 1120 / 338;
-  isolation: isolate;
+  aspect-ratio: 563 / 317;
 }
 
-.animated-logo__fallback,
-.animated-logo__motion {
-  position: absolute;
-  inset: 0;
+.brand-logo__image {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.animated-logo__fallback {
-  z-index: 0;
-}
-
-.animated-logo__motion {
-  z-index: 1;
-  mix-blend-mode: screen;
-}
-
-.animated-logo--header {
-  width: clamp(6.75rem, 15vw, 12rem);
-}
-
-.animated-logo--hero {
-  width: min(84vw, 52rem);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animated-logo__motion {
-    display: none;
-  }
 }

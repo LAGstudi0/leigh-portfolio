@@ -58,7 +58,8 @@ These files would be publicly reachable after deployment because they are under 
 
 | Project / Use | Public path | Current approval status | Launch status |
 |---|---|---|---|
-| Animated wordmark | `/media/branding/leigh-logo.webm` | Inferred approved from supplied `leigh.mov` and current live-site identity | READY for client review |
+| Navigation wordmark | `/media/branding/logo.gif` | Approved by Logo Correction request | READY |
+| Navigation wordmark reduced-motion frame | `/media/branding/logo-static.png` | Derived from `logo.gif` | READY |
 | Homepage background | `/media/video/home-background-1080.mp4` | Inferred approved from current live site matching asset | READY for client review |
 | Homepage background mobile | `/media/video/home-background-720.mp4` | Inferred approved from current live site matching asset | READY for client review |
 | Big Feelings | `/media/video/projects/big-feelings-episode-05-a-storms-brewing.mp4` | Approval unknown | NEEDS CLIENT APPROVAL |
@@ -78,7 +79,7 @@ These files would be publicly reachable after deployment because they are under 
 - `public/media/posters/`: 424 KB.
 - Largest production video: Big Feelings derivative, 17.0 MB.
 - Largest homepage video: `home-background-1080.mp4`, 12.0 MB.
-- Animated logo derivative: `leigh-logo.webm`, 674 KB.
+- Logo GIF derivative: `logo.gif`, 287 KB.
 - Largest production image/poster: `cacophony.webp`, 153 KB.
 
 Largest video files:
