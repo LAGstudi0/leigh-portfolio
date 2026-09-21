@@ -39,15 +39,12 @@ export const categories: Category[] = [
       width: 1920,
       height: 1080,
       aspectRatio: "16 / 9"
-    },
-    unresolved: [
-      "Confirm whether the showreel is a category hero, standalone project, or both."
-    ]
+    }
   },
   {
     slug: "social-impact",
     title: "Social Impact",
-    status: "inferred",
+    status: "known",
     cover: {
       type: "image",
       src: "/media/images/social-impact.webp",
@@ -55,10 +52,7 @@ export const categories: Category[] = [
       width: 1920,
       height: 1080,
       aspectRatio: "16 / 9"
-    },
-    unresolved: [
-      "Confirm whether this is a standalone category page, a project page, or only a Work-grid tile."
-    ]
+    }
   },
   {
     slug: "explainers",

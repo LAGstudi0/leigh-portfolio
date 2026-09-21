@@ -1,5 +1,16 @@
 # Open Questions
 
+## Client Feedback Pass - 2026-09-21
+
+This section supersedes earlier questions where the latest feedback explicitly resolves them.
+
+- Kid LAROI thumbnail — replacement asset pending from client. Keep its existing thumbnail until supplied; both thumbnail and external player poster are configured in `content/projects.ts`.
+- Maxi Millz: visually confirmed `_Paulo/Music Videos.png` depicts the child with two buns and pink wings. Reuse its existing `/media/images/music-videos.webp` derivative, with no original modification. Kid LAROI temporarily shares that image per the instruction to leave its current thumbnail unchanged.
+- Social Impact: the client explicitly requests both CEI and The Leak to play here. Their earlier category/derivative hold is superseded; optimized local video sources are now supplied.
+- Hand Drawn Animation: the showreel is now controlled inline on the category page. Its existing detail route remains intact.
+- Big Feelings: client names and introductory copy are verified against the client-specified live page and reused as requested. The local folder has no storyboard sheets. The user explicitly approved using the two published storyboard images; optimized local copies are now included. Source URLs are recorded in ASSET_INVENTORY.md.
+- Vimeo playback could not be verified end to end: the player endpoint returned HTTP 401 with a connection-security restriction in this test environment. Deferred iframe creation and its URL were verified.
+
 Audit date: 2026-08-23
 
 ## Highest Priority

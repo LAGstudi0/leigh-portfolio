@@ -6,9 +6,8 @@ import {
   getProjectBySlug,
   projects
 } from "@/content";
-import { ExternalVideo } from "@/components/media/ExternalVideo";
-import { LocalVideo } from "@/components/media/LocalVideo";
-import { ResponsiveImage } from "@/components/media/ResponsiveImage";
+import { ProjectMedia } from "@/components/project/ProjectMedia";
+import { CaseStudy } from "@/components/project/CaseStudy";
 import { PageHeader } from "@/components/ui/PageHeader";
 
 type ProjectRouteProps = {
@@ -73,34 +72,10 @@ export default async function ProjectPage({ params }: ProjectRouteProps) {
       <PageHeader eyebrow={category?.title ?? "Work"} title={project.title} />
 
       <section className="project-hero" aria-label={project.title}>
-        {project.externalVideo ? (
-          <ExternalVideo video={project.externalVideo} />
-        ) : project.localVideo ? (
-          <LocalVideo media={project.localVideo} title={project.title} />
-        ) : (
-          <ResponsiveImage media={project.hero ?? project.thumbnail} priority />
-        )}
+        <ProjectMedia project={project} />
       </section>
 
-      {project.layout === "case-study" && project.gallery ? (
-        <section className="case-study-gallery" aria-labelledby="case-study-heading">
-          <h2 className="section-title" id="case-study-heading">
-            Big Feelings
-          </h2>
-          <div className="case-study-gallery__grid">
-            {project.gallery.map((item, index) => (
-              <figure className="case-study-gallery__item" key={item.src}>
-                <ResponsiveImage
-                  media={item}
-                  priority={index < 2}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                />
-                {item.caption ? <figcaption>{item.caption}</figcaption> : null}
-              </figure>
-            ))}
-          </div>
-        </section>
-      ) : null}
+      {project.layout === "case-study" ? <CaseStudy project={project} /> : null}
 
       <nav className="project-footer-nav" aria-label="Project navigation">
         <Link href={category ? `/work/category/${category.slug}` : "/work"}>

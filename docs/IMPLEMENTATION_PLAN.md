@@ -1,5 +1,16 @@
 # Implementation Plan
 
+## Client Feedback Implementation - 2026-09-21
+
+The route architecture and dependencies are unchanged. Current behavior supersedes the historical stage notes below:
+
+- Header branding uses `logo.gif` only, with the existing static GIF-derived reduced-motion fallback and no center homepage logo.
+- Category/project pages share a 62rem media width; thumbnail grids use two equal columns at 700px and above. The main Work category-tile layout is preserved.
+- `ProjectMedia` reuses existing media primitives. Hand Drawn Animation and Trailer Work play inline on their category pages; Social Impact has two equal local players. No category showreel autoplays.
+- `LocalVideo` adds an accessible poster Play control while retaining native playback controls, inline playback and no preload.
+- `CaseStudy` renders structured Big Feelings clients/copy and grouped storyboarding, background, and character artwork. Published storyboard images were explicitly approved for local derivation.
+- Only the two previously missing Social Impact video derivatives and two approved storyboard image derivatives were generated in this pass.
+
 Audit date: 2026-08-23
 
 This plan is for the next phase only. No full site implementation has begun.

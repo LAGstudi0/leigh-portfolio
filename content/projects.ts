@@ -136,7 +136,7 @@ export const projects: Project[] = [
       }
     ],
     unresolved: [
-      "Confirm whether _Paulo/Music Videos.png belongs to this project.",
+      "Kid LAROI thumbnail — replacement asset pending from client",
       "Confirm credits and role."
     ]
   },
@@ -147,21 +147,20 @@ export const projects: Project[] = [
     categorySlug: "music-videos",
     thumbnail: {
       type: "image",
-      src: "https://i.ytimg.com/vi/0yau_f0PKR8/hqdefault.jpg",
+      src: "/media/images/music-videos.webp",
       alt: "",
-      width: 480,
-      height: 360,
+      width: 1920,
+      height: 1080,
       aspectRatio: "16 / 9"
     },
     externalVideo: {
       platform: "youtube",
       url: "https://youtu.be/0yau_f0PKR8?si=LUqq5gyZ-3Us2Z4d",
       title: "Maxi Millz - Young and Stupid (Official Music Video)",
-      thumbnail: "https://i.ytimg.com/vi/0yau_f0PKR8/hqdefault.jpg"
+      thumbnail: "/media/images/music-videos.webp"
     },
     unresolved: [
-      "Confirm credits and role.",
-      "Confirm whether a client-supplied thumbnail exists."
+      "Confirm credits and role."
     ]
   },
   {
@@ -330,6 +329,7 @@ export const projects: Project[] = [
     },
     localVideo: {
       type: "video",
+      src: "/media/video/projects/cei-global-explainer.mp4",
       poster: "/media/images/social-impact.webp",
       aspectRatio: "16 / 9"
     },
@@ -348,8 +348,7 @@ export const projects: Project[] = [
       }
     ],
     unresolved: [
-      "Confirm category: Social Impact or Explainers.",
-      "Confirm client, credits, role, date, and public hosting approval."
+      "Confirm client, credits, role, and date."
     ]
   },
   {
@@ -387,7 +386,7 @@ export const projects: Project[] = [
       }
     ],
     unresolved: [
-      "Confirm if this is a category hero, standalone project, or both."
+      "Confirm credits and role."
     ]
   },
   {
@@ -572,6 +571,7 @@ export const projects: Project[] = [
     },
     localVideo: {
       type: "video",
+      src: "/media/video/projects/episode-05-the-leak.mp4",
       poster: "/media/posters/episode-05-the-leak.webp",
       aspectRatio: "16 / 9"
     },
@@ -584,12 +584,20 @@ export const projects: Project[] = [
       }
     ],
     unresolved: [
-      "Confirm exact project title, client, category, and public hosting approval."
+      "Confirm exact project title, client, credits, and role."
     ]
   },
   {
     slug: "big-feelings",
     title: "Big Feelings",
+    caseStudyContent: {
+      clients: ["Black Dog Institute", "Portable"],
+      introduction: [
+        "The Vibe Checkers are here to help each other learn how to regulate their Big Feelings!",
+        "This is part of a 9 episode animated series in which I was the lead animator, handling every stage of production including storyboarding, scriptwriting, animation, and background design, while also managing the team."
+      ],
+      referenceUrl: "https://www.leighsalvage.com/big-feelings"
+    },
     status: "known",
     categorySlug: "big-feelings",
     thumbnail: {
@@ -617,8 +625,25 @@ export const projects: Project[] = [
     gallery: [
       {
         type: "image",
+        src: "/media/images/big-feelings-storyboard-1.webp",
+        alt: "Storyboard panels 1 to 6: Bounce says goodbye to Ollie and sits alone at school",
+        section: "storyboarding",
+        width: 1600,
+        height: 980
+      },
+      {
+        type: "image",
+        src: "/media/images/big-feelings-storyboard-2.webp",
+        alt: "Storyboard panels 7 to 12: Zip talks with Bounce on the school bench",
+        section: "storyboarding",
+        width: 1600,
+        height: 946
+      },
+      {
+        type: "image",
         src: "/media/images/big-feelings-bg-2.webp",
-        alt: "",
+        alt: "Playground background panorama",
+        section: "background-design",
         caption: "Background Art",
         width: 1920,
         height: 679,
@@ -627,7 +652,8 @@ export const projects: Project[] = [
       {
         type: "image",
         src: "/media/images/big-feelings-character-designs.webp",
-        alt: "",
+        alt: "Leg and foot pose studies",
+        section: "character-design",
         caption: "Character Designs",
         width: 1024,
         height: 635,
@@ -636,7 +662,8 @@ export const projects: Project[] = [
       {
         type: "image",
         src: "/media/images/big-feelings-face.webp",
-        alt: "",
+        alt: "Facial expression studies",
+        section: "character-design",
         caption: "Expression Library",
         width: 1024,
         height: 640,
@@ -645,7 +672,8 @@ export const projects: Project[] = [
       {
         type: "image",
         src: "/media/images/big-feelings-hands.webp",
-        alt: "",
+        alt: "Hand pose studies",
+        section: "character-design",
         caption: "Hand Poses",
         width: 1024,
         height: 549,
@@ -654,7 +682,8 @@ export const projects: Project[] = [
       {
         type: "image",
         src: "/media/images/big-feelings-bounce.webp",
-        alt: "",
+        alt: "Bounce basketball character poses and expressions",
+        section: "character-design",
         caption: "Character Designs",
         width: 1024,
         height: 826,
@@ -663,7 +692,8 @@ export const projects: Project[] = [
       {
         type: "image",
         src: "/media/images/big-feelings-spark.webp",
-        alt: "",
+        alt: "Pencil character poses and expressions",
+        section: "character-design",
         caption: "Character Designs",
         width: 1024,
         height: 578,
@@ -672,7 +702,8 @@ export const projects: Project[] = [
       {
         type: "image",
         src: "/media/images/big-feelings-bg-1.webp",
-        alt: "",
+        alt: "Classroom background design",
+        section: "background-design",
         caption: "Background Art",
         width: 1920,
         height: 1093,
@@ -681,7 +712,8 @@ export const projects: Project[] = [
       {
         type: "image",
         src: "/media/images/big-feelings-bg-3.webp",
-        alt: "",
+        alt: "Golden Vibes Primary School exterior background",
+        section: "background-design",
         caption: "Background Art",
         width: 1920,
         height: 1307,
@@ -718,7 +750,7 @@ export const projects: Project[] = [
       }
     ],
     unresolved: [
-      "Confirm client, description, outcomes, and credits.",
+      "Confirm any additional outcomes and collaborator credits beyond the approved live-site copy.",
       "Confirm which process assets are approved for public display.",
       "Confirm whether Characters.zip may be extracted."
     ]

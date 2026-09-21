@@ -15,7 +15,7 @@ export function ProjectSummary({ project, priority = false }: ProjectSummaryProp
           <ResponsiveImage
             media={project.thumbnail}
             priority={priority}
-            sizes="(min-width: 1024px) 33vw, 100vw"
+            sizes="(min-width: 1100px) 480px, (min-width: 700px) 46vw, 92vw"
           />
         </span>
         <span className="project-summary__body">

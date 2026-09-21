@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   categories,
@@ -8,7 +7,7 @@ import {
 } from "@/content";
 import { ProjectSummary } from "@/components/project/ProjectSummary";
 import { PageHeader } from "@/components/ui/PageHeader";
-import { ResponsiveImage } from "@/components/media/ResponsiveImage";
+import { ProjectMedia } from "@/components/project/ProjectMedia";
 
 type CategoryRouteProps = {
   params: Promise<{
@@ -63,8 +62,11 @@ export default async function CategoryPage({ params }: CategoryRouteProps) {
   }
 
   const categoryProjects = getProjectsByCategory(category.slug);
-  const leadProject =
-    categoryProjects.find((project) => project.featured) ?? categoryProjects[0];
+  const leadProject = categoryProjects.find((project) =>
+    category.slug === "hand-drawn-animation"
+      ? project.slug === "hand-drawn-animation-showreel"
+      : category.slug === "trailer-work" && project.slug === "trailer-showreel"
+  );
   const gridProjects = leadProject
     ? categoryProjects.filter((project) => project.slug !== leadProject.slug)
     : categoryProjects;
@@ -75,45 +77,19 @@ export default async function CategoryPage({ params }: CategoryRouteProps) {
 
       {leadProject ? (
         <section className="category-feature" aria-label={leadProject.title}>
-          <Link className="category-feature__link media-link" href={`/work/${leadProject.slug}`}>
-            {leadProject.localVideo?.src ? (
-              <span className="video-preview" aria-hidden="true">
-                <img
-                  src={leadProject.localVideo.poster ?? leadProject.thumbnail?.src}
-                  alt=""
-                  loading="eager"
-                />
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  poster={leadProject.localVideo.poster}
-                >
-                  <source
-                    src={leadProject.localVideo.src}
-                    type="video/mp4"
-                    media="(prefers-reduced-motion: no-preference)"
-                  />
-                </video>
-              </span>
-            ) : (
-              <ResponsiveImage
-                media={leadProject.thumbnail ?? category.cover}
-                sizes="(min-width: 1024px) 70rem, 100vw"
-                priority
-              />
-            )}
-            <span className="media-link__label">{leadProject.title}</span>
-          </Link>
+          <ProjectMedia project={leadProject} />
         </section>
       ) : null}
 
       {gridProjects.length > 0 ? (
         <section className="project-grid" aria-label={`${category.title} projects`}>
           {gridProjects.map((project, index) => (
-            <ProjectSummary
+            category.slug === "social-impact" ? (
+              <article className="inline-project" key={project.slug}>
+                <h2>{project.title}</h2>
+                <ProjectMedia project={project} />
+              </article>
+            ) : <ProjectSummary
               key={project.slug}
               project={project}
               priority={index < 2}

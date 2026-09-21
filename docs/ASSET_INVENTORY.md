@@ -1,5 +1,16 @@
 # Asset Inventory
 
+## Client Feedback Derivatives - 2026-09-21
+
+- `CEI_Global_Explainer_Story2.mp4` -> `public/media/video/projects/cei-global-explainer.mp4`: 32,308,254 bytes, 1920x1080 H.264/yuv420p, AAC stereo, 171.05 seconds.
+- `EP05_The_Leak_v4.mp4` -> `public/media/video/projects/episode-05-the-leak.mp4`: 48,005,956 bytes, 1920x1080 H.264/yuv420p, AAC stereo, 196.885 seconds.
+- Both missing videos were encoded with libx264 CRF 23, fast preset, AAC 128k and MP4 faststart. Existing working derivatives were not re-encoded. This supersedes their earlier deferred status.
+- Maxi Millz reuses the existing `_Paulo/Music Videos.png` -> `public/media/images/music-videos.webp` mapping after visually verifying the two-bun child with pink wings. No new thumbnail derivative was necessary.
+- Source files and archives remain unchanged.
+- Approved published storyboard source 1: `https://framerusercontent.com/images/D1K5D0Lq3WMk61u4uPnX0woSNOc.png` (2352x1440) -> `public/media/images/big-feelings-storyboard-1.webp` (1600x980, 156,364 bytes).
+- Approved published storyboard source 2: `https://framerusercontent.com/images/PdbqhPFrIZattmlMV7NjFOPpYOk.png` (2436x1440) -> `public/media/images/big-feelings-storyboard-2.webp` (1600x946, 138,514 bytes).
+- Both storyboard sources were visually inspected (panels 1-6 and 7-12) and derived using WebP quality 88 without cropping. Explicit reuse approval received in this feedback pass; Characters.zip stays private.
+
 Audit date: 2026-08-23
 
 Source root:

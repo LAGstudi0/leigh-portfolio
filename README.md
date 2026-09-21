@@ -128,7 +128,7 @@ The media components are poster-first and defer expensive playback:
 - `components/media/ResponsiveImage.tsx` is ready for optimized public image derivatives.
 - `components/media/MediaPlaceholder.tsx` keeps layout stable before derivatives exist.
 - The homepage background video is isolated to `/` and uses muted looping MP4 variants with a WebP poster.
-- The Hand Drawn Animation category lead can use the optimized showreel as a muted looping preview.
+- The Hand Drawn Animation and Trailer Work categories play their showreels inline on request. Social Impact uses two controlled local players.
 - `components/branding/BrandLogo.tsx` uses the approved GIF wordmark with a static PNG reduced-motion fallback derived from the GIF.
 
 Do not serve large source videos directly from `source-assets/`.
@@ -154,4 +154,5 @@ The current pages implement the Stage 5 client-review site. Later work should fo
 - Avoid loading multiple third-party video players on index pages.
 - Preserve the `HOME / WORK / CONTACT` top-level navigation unless the client changes direction.
 - Do not deploy until the user explicitly asks for a deployment stage.
+- The client feedback pass adds CEI and The Leak derivatives and organizes Big Feelings into case-study sections, including approved storyboard images from the live site. Review status and the pending Kid LAROI thumbnail are recorded in `docs/CLIENT_REVIEW.md`.
 - Before switching `leighsalvage.com`, confirm DNS/hosting ownership and configure redirects listed in `docs/LAUNCH_CHECKLIST.md`.

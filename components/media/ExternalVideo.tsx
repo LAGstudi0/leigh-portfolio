@@ -60,7 +60,7 @@ export function ExternalVideo({ video }: ExternalVideoProps) {
           {video.thumbnail ? (
             <img src={video.thumbnail} alt="" loading="lazy" />
           ) : null}
-          <span className="external-video__play">Play</span>
+          <span className="external-video__play" aria-hidden="true"><span className="play-symbol" /></span>
         </button>
       )}
     </AspectBox>

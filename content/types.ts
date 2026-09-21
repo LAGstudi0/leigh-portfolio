@@ -11,6 +11,7 @@ export type MediaAsset = {
   width?: number;
   height?: number;
   aspectRatio?: string;
+  section?: "background-design" | "character-design" | "storyboarding";
 };
 
 export type ExternalVideo = {
@@ -47,6 +48,11 @@ export type Project = {
   localVideo?: MediaAsset;
   externalVideo?: ExternalVideo;
   gallery?: MediaAsset[];
+  caseStudyContent?: {
+    clients: string[];
+    introduction: string[];
+    referenceUrl: string;
+  };
   sourceAssets?: SourceAssetReference[];
   featured?: boolean;
   caseStudy?: boolean;

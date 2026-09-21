@@ -1,5 +1,20 @@
 # Client Review
 
+## Feedback Applied - 2026-09-21
+
+- Header logo and regular-weight navigation share one horizontal row, including 320px. The GIF's transparent padding is optically compensated without cropping or changing the file.
+- Category/project titles are smaller and regular weight, within a shared 62rem media container.
+- Music Videos and Explainers now show all four projects in 2x2 desktop grids; Hand Drawn Animation uses the same two-column grid beneath its inline showreel. These stack below 700px. The main Work layout remains unchanged apart from removal of the duplicate small Work label.
+- Maxi Millz now uses the supplied kid/two-buns/pink-wings still via the existing `music-videos.webp` derivative.
+- Kid LAROI thumbnail — replacement asset pending from client.
+- Big Feelings now contains the episode, verified clients/introduction, Storyboarding, Background Design, and Character Design. Local process images retain their full artwork proportions. The user approved reuse of the live reference's two storyboard sheets; these now have optimized local copies. Artwork links open the image for closer inspection.
+- Social Impact playback failure was caused by missing `localVideo.src` values and missing public derivatives, not by broken codecs. Two H.264/AAC derivatives now play inline with posters, controls, audio, and no preload.
+- Trailer Work creates its Vimeo player in place on Play; the website-added title and Play text overlay are removed, leaving an accessible icon control.
+
+Validation: typecheck and production build pass. Affected category layouts, Home, Work, and Big Feelings were checked at 320, 375, 390, 430, 768, 1024, 1280, and 1440px without horizontal overflow. Home contains one header logo and no centered duplicate. Local playback and native pause controls were exercised. Vimeo restricts this test connection (HTTP 401), so final Vimeo playback requires a check from an unrestricted connection. No deployment was performed.
+
+The historical review checklist below remains relevant except where superseded above.
+
 Review date: 2026-08-24
 
 This list contains the decisions needed from Leigh before launch. It avoids implementation details unless they affect what will be public.

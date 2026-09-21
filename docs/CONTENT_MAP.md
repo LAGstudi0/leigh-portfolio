@@ -1,5 +1,15 @@
 # Content Map
 
+## Client Feedback Update - 2026-09-21
+
+- Music Videos keeps its four established projects as a 2x2 desktop grid, without a singled-out hero.
+- Maxi Millz uses the supplied two-bun/pink-wing character image, `_Paulo/Music Videos.png`, through the existing public WebP. Kid LAROI retains its current thumbnail pending the client's replacement.
+- Social Impact's CEI and The Leak grouping/playback is now explicitly requested by the client. Both have controlled inline local videos.
+- Hand Drawn Animation and Trailer Work showreels play directly on their category pages; existing detail routes remain available.
+- Big Feelings now uses verified copy and clients from the specified live reference, followed by Storyboarding, Background Design and Character Design. Two published storyboard sheets were separately approved for reuse and are mapped in ASSET_INVENTORY.md.
+
+These decisions supersede the corresponding historical hypotheses below.
+
 Audit date: 2026-08-23
 
 ## Source-of-truth Status

@@ -5,8 +5,7 @@
 }
 
 .category-tile,
-.project-summary__link,
-.media-link {
+.project-summary__link {
   position: relative;
   display: block;
   overflow: hidden;
@@ -15,8 +14,7 @@
 }
 
 .category-tile,
-.project-summary__media,
-.media-link {
+.project-summary__media {
   aspect-ratio: 16 / 9;
 }
 
@@ -28,48 +26,19 @@
 }
 
 .category-tile img,
-.project-summary img,
-.media-link img,
-.video-preview video {
+.project-summary img {
   transition:
     opacity var(--transition-fast),
     transform 420ms ease;
 }
 
 .category-tile:hover img,
-.project-summary__link:hover img,
-.media-link:hover img,
-.media-link:hover .video-preview video {
+.project-summary__link:hover img {
   opacity: 0.72;
   transform: scale(1.025);
 }
 
-.video-preview {
-  position: absolute;
-  inset: 0;
-  display: block;
-  overflow: hidden;
-}
-
-.video-preview img,
-.video-preview video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-preview img {
-  z-index: 0;
-}
-
-.video-preview video {
-  z-index: 1;
-}
-
-.category-tile__title,
-.media-link__label {
+.category-tile__title {
   position: absolute;
   right: var(--space-4);
   bottom: var(--space-4);
@@ -83,8 +52,7 @@
   text-shadow: 0 1px 18px rgba(0, 0, 0, 0.72);
 }
 
-.category-tile::after,
-.media-link::after {
+.category-tile::after {
   position: absolute;
   inset: 0;
   content: "";
@@ -129,9 +97,9 @@
 
 .project-summary__title {
   display: block;
-  font-size: 1.45rem;
-  font-weight: 700;
-  line-height: 1;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3;
   text-transform: uppercase;
   overflow-wrap: anywhere;
 }
@@ -158,24 +126,17 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .category-tile__title,
-  .media-link__label {
+  .category-tile__title {
     font-size: 2.15rem;
   }
 
   .project-summary__title {
-    font-size: 1.85rem;
+    font-size: 1.125rem;
   }
 }
 
 @media (min-width: 1060px) {
   .category-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .video-preview video {
-    display: none;
   }
 }

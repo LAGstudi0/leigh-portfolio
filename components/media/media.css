@@ -86,7 +86,38 @@
 }
 
 .local-video {
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.local-video__start {
+  position: absolute;
+  inset: 0 0 3rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.local-video__start .external-video__play {
+  transform: translateY(1.5rem);
+}
+
+.play-symbol {
+  width: 1.15rem;
+  height: 1.35rem;
+  margin-left: 0.2rem;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.video-error {
+  position: absolute;
+  inset: auto 0 3rem;
+  margin: 0;
+  padding: 0.5rem;
+  background: var(--color-bg);
 }
 
 @media (max-width: 520px) {
